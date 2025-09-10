@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cut-off Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fdfd;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #004080;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e6f7ff;
+      border-left: 5px solid #0077cc;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #004080;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cut-off Calculator</h1>
+    <form method="POST">
+      <label for="stream">Select Stream:</label>
+      <select name="stream" id="stream" required>
+        <option value="maths">Maths</option>
+        <option value="bio">Biology</option>
+      </select>
+
+      <label for="physics">Physics Marks:</label>
+      <input type="number" id="physics" name="physics" min="0" max="200" required>
+
+      <label for="chemistry">Chemistry Marks:</label>
+      <input type="number" id="chemistry" name="chemistry" min="0" max="200" required>
+
+      <div id="mathsField">
+        <label for="maths">Maths Marks:</label>
+        <input type="number" id="maths" name="maths" min="0" max="200">
+      </div>
+
+      <div id="bioField" style="display:none;">
+        <label for="biology">Biology Marks:</label>
+        <input type="number" id="biology" name="biology" min="0" max="200">
+      </div>
+
+      <button type="submit">Calculate Cut-off</button>
+    </form>
+
+    {% if cutoff %}
+    <div class="result">
+      🎯 Your Cut-off is: {{ cutoff }}
+    </div>
+    {% endif %}
+  </div>
+
+  <script>
+    const streamSelect = document.getElementById("stream");
+    const mathsField = document.getElementById("mathsField");
+    const bioField = document.getElementById("bioField");
+
+    function toggleFields() {
+      if (streamSelect.value === "maths") {
+        mathsField.style.display = "block";
+        bioField.style.display = "none";
+      } else {
+        mathsField.style.display = "none";
+        bioField.style.display = "block";
+      }
+    }
+
+    streamSelect.addEventListener("change", toggleFields);
+    window.onload = toggleFields;
+  </script>
+</body>
+</html>

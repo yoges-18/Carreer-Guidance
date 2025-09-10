@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B.Tech - Science Stream</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #004080;
+    }
+
+    p.intro {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .branch-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .branch-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .branch-card h3 {
+      margin-top: 0;
+      color: #004080;
+    }
+
+    .branch-card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .branch-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>B.Tech - Engineering Branches</h1>
+    <p class="intro">Explore different branches available under the B.Tech (Science) stream.</p>
+
+    <div class="branch-list">
+      <div class="branch-card">
+       <a href ="/cs"> <h3>Computer Science Engineering (CSE)</h3></a>
+        <p>Focuses on programming, software development, AI, cybersecurity, and data science.</p>
+      </div>
+      <div class="branch-card">
+        <a href = "/mech"><h3>Mechanical Engineering</h3></a>
+        <p>Deals with design and manufacturing of machines, automotive, and thermal systems.</p>
+      </div>
+      <div class="branch-card">
+        <a href ="/eee"><h3>Electrical Engineering</h3></a>
+        <p>Covers circuits, power systems, electronics, control systems, and electromagnetics.</p>
+      </div>
+      <div class="branch-card">
+        <a href ="/civil"><h3>Civil Engineering</h3></a>
+        <p>Focuses on infrastructure like buildings, bridges, roads, and construction management.</p>
+      </div>
+      <div class="branch-card">
+        <a href ="/ece"><h3>Electronics & Communication</h3></a>
+        <p>Combines electronics with communication technologies like networks, signals, and IoT.</p>
+      </div>
+      <div class="branch-card">
+       <a href="/it"> <h3>Information Technology</h3></a>
+        <p>Focuses on information systems, software, web technologies, and data management.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

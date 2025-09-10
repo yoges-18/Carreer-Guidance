@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Guidance Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #004080;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    hr {
+      border: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .main-image img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #0077cc;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+
+    .buttons a:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <center>
+        <h1>Career Guidance</h1>
+        <p>Your future starts here!</p>
+      </center>
+    </header>
+
+    <hr>
+
+    <p>
+      Welcome to our Career Guidance Portal — a dedicated platform designed to help students make informed decisions about their academic and professional futures. Whether you're exploring degree options after 12th grade or trying to understand the career paths available in different streams like Science, Commerce, or Arts, this website provides a clear and simple layout to guide you. With categorized degree sections, branch-wise career details, and easy-to-use navigation, our goal is to make your journey toward the right career smooth and confident. Start exploring your future today!
+    </p>
+
+    <div class="main-image">
+      <img src="{{ url_for('static', filename='img.home.jpg') }}" alt="Career Image" width="600px" height="400px">
+    </div>
+
+    <div class="buttons">
+      <a href="/cutoff">Cut-off Calculator</a>
+      <a href="/main">Guidance Section</a>
+      <a href="/quiz">Quiz</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f6fc;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #004080;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question p {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .options label {
+      display: block;
+      margin-top: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .result {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Career Guidance Quiz</h2>
+    <form method="POST" action="/quiz">
+      {% for i in range(1, 11) %}
+      <div class="question">
+        <p>Q{{ i }}. {{ questions[i-1]["question"] }}</p>
+        <div class="options">
+          <label><input type="radio" name="q{{ i }}" value="A" required> {{ questions[i-1]["A"] }}</label>
+          <label><input type="radio" name="q{{ i }}" value="B"> {{ questions[i-1]["B"] }}</label>
+          <label><input type="radio" name="q{{ i }}" value="C"> {{ questions[i-1]["C"] }}</label>
+        </div>
+      </div>
+      {% endfor %}
+      <input type="submit" value="Submit Quiz">
+    </form>
+
+    {% if result %}
+    <div class="result">{{ result }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guidance Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, .slogan {
+      text-align: center;
+    }
+
+    .degree-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .degree-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-content {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .card-content img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .text {
+      max-width: 700px;
+    }
+
+    .text a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #004080;
+      text-decoration: none;
+    }
+
+    .text p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .card-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .card-content img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Guidance Section</h1>
+    <p class="slogan">Choose your path to a successful future</p>
+    <hr style="border: 1px solid black; margin: 20px 0;"/>
+
+    <div class="degree-grid">
+      <div class="degree-card">
+        <div class="card-content">
+          <img src="{{ url_for('static', filename='science.jpg')}}" alt="Science" />
+          <div class="text">
+            <a href="/btech">Science</a>
+            <p>Science opens doors to technical, medical, and research careers. It includes subjects like Physics, Chemistry, Biology, and Mathematics.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="degree-card">
+        <div class="card-content">
+          <img src="{{ url_for('static', filename='commerce.jpg')}}" alt="Commerce" />
+          <div class="text">
+            <a href="/bsc">Commerce</a>
+            <p>Commerce leads to careers in business, finance, economics, and accounting. Ideal for students interested in markets and management.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="degree-card">
+        <div class="card-content">
+          <img src="{{ url_for('static', filename='Arts & Humanities.png')}}"/>
+          <div class="text">
+            <a href="/bcom">Arts & Humanities</a>
+            <p>This stream includes subjects like History, Sociology, Psychology, and Literature — great for creative and civil service careers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="degree-card">
+        <div class="card-content">
+          <img src="{{ url_for('static', filename='creative.jpg')}}" alt="Design" />
+          <div class="text">
+            <a href="/ba">Design & Creativity</a>
+            <p>Focuses on visual design, fashion, animation, and creative thinking. Ideal for students interested in artistic or media careers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

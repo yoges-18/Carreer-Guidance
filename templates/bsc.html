@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commerce Stream</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f6fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #005070;
+    }
+
+    p.intro {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .branch-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .branch-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .branch-card h3 {
+      margin-top: 0;
+      color: #005070;
+    }
+
+    .branch-card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .branch-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Commerce Stream</h1>
+    <p class="intro">Discover top courses and careers in the Commerce stream.</p>
+
+    <div class="branch-list">
+      <div class="branch-card">
+        <a href = "/bc"><h3>Bachelor of Commerce (B.Com)</h3></a>
+        <p>Foundational course in accounting, economics, business law, and taxation. Leads to CA, MBA, or banking careers.</p>
+      </div>
+      <div class="branch-card">
+       <a href = "/bba"> <h3>Bachelor of Business Administration (BBA)</h3></a>
+        <p>Focuses on business management, HR, marketing, and entrepreneurship. Ideal for future managers and leaders.</p>
+      </div>
+      <div class="branch-card">
+        <a href="/ca_syllabus"><h3>Chartered Accountancy (CA)</h3></a>
+        <p>Professional certification in accounting and auditing. Highly respected and offers great career opportunities.</p>
+      </div>
+      <div class="branch-card">
+       <a href="/cs_professional"><h3>Company Secretary (CS)</h3></a>
+        <p>Specializes in corporate law, company governance, and regulatory compliance. Often pursued with B.Com.</p>
+      </div>
+      <div class="branch-card">
+        <a href="/economics"><h3>Bachelor of Economics (B.Econ)</h3></a>
+        <p>Focuses on economic theory, finance, and policy-making. Ideal for research, planning, and government roles.</p>
+      </div>
+      <div class="branch-card">
+       <a href="/cma"> <h3>Cost and Management Accounting (CMA)</h3></a>
+        <p>Teaches budgeting, cost control, and management accounting — helpful in finance-heavy roles.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
